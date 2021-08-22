@@ -1,6 +1,6 @@
 package me.lusu007.springbootcourse.student;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -9,14 +9,10 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class StudentService {
 
   private final StudentRepository studentRepository;
-
-  @Autowired
-  public StudentService(StudentRepository studentRepository) {
-    this.studentRepository = studentRepository;
-  }
 
   public List<Student> getStudents() {
     return studentRepository.findAll();

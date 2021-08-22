@@ -28,7 +28,7 @@ public class Student {
   private String email;
   private LocalDate dob;
   @Transient
-  private Integer age;
+  private int age;
 
   public Student(String name, String email, LocalDate dob) {
     this.name = name;
